@@ -1,41 +1,5 @@
 
-
-<div class="ads index large-9 medium-8 columns content">
-    <h3><?= __('Ads') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-        <?= $this->Html->link(__('Ajouter un offre'), ['controller' => 'Ads', 'action' => 'add']) ?>
-
-            <tr>
-                <th><?= $this->Paginator->sort('Vendeur') ?></th>
-                <th><?= $this->Paginator->sort('Type d\'offre') ?></th>
-                <th><?= $this->Paginator->sort('A vendre') ?></th>
-                <th><?= $this->Paginator->sort('A louer') ?></th>
-                <th><?= $this->Paginator->sort('Prix') ?></th>
-                <th><?= $this->Paginator->sort('Information prix') ?></th>
-                <th><?= $this->Paginator->sort('Surface') ?></th>
-                <th><?= $this->Paginator->sort('Divisible') ?></th>
-                <th><?= $this->Paginator->sort('Ville') ?></th>
-                <th><?= $this->Paginator->sort('Photo') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-        </ul>
-        <p><?= $this->Paginator->counter() ?></p>
-    </div>
-</div>
-
-TEMPLATE
-
-(<!-- Wrapper -->
+<!-- Wrapper -->
 <div class="wrapper">
 
 </div><!-- /.container -->
@@ -63,28 +27,27 @@ TEMPLATE
                             <span class="search-count"></span>
                             <div class="sorting">
                                 <div class="form-group">
-                                    <select name="sorting">
-                                        <option value="">Trier par</option>
 
-                                        <option value=<?= $this->Paginator->sort('price', 'tri par prix croissant', ['direction' => 'desc']); ?></option>
-                                        <option value=<?= $this->Paginator->sort('price', 'tri par prix decroissant', ['direction' => 'asc']); ?></option>
-                                        <option value=<?= $this->Paginator->sort('created', 'tri par date de création', ['direction' => 'desc']); ?></option>
-                                    </select>
+                                        <?= $this->Paginator->sort('price', 'tri par prix ', ['direction' => 'desc']); ?>
+                                        <?= $this->Paginator->sort('created', 'tri par date de création', ['direction' => 'desc']); ?>
+
                                 </div><!-- /.form-group -->
                             </div>
                         </figure>
                     </section>
+
                     <section id="properties" class="display-lines">
+                        <?php foreach ($ads as $ad): ?>
                         <div class="property">
 
                             <div class="property-image">
                                 <figure class="ribbon">Transaction</figure>
                                 <a href="property-detail.html">
-                                    <img alt="" src="assets/img/properties/property-01.jpg">
+                                    <?= $this->Html->image($ad->images[0]->description); ?>
                                 </a>
                             </div>
-                            <?php foreach ($ads as $ad): ?>
-                                <tr>
+
+                             <!--   <tr>
                                     <td><?= $ad->has('user') ? $this->Html->link($ad->user->username, ['controller' => 'Users', 'action' => 'view', $ad->user->id]) : '' ?></td>
                                     <td><?= $ad->type_ad->type_name ?></td>
                                     <td><?= $this->BooleenTranslate->makeEdit($ad->for_sale)//Booleen
@@ -94,94 +57,37 @@ TEMPLATE
                                     <td><?= ($ad->price_info) ?></td>
                                     <td><?= $this->Number->format($ad->surface) ?></td>
                                     <td><?= $this->BooleenTranslate->makeEdit($ad->is_divisible) ?></td>
-                                    <td><?= $ad->town->town_name?></td>
-                                    <td><?= $this->Html->image($ad->images[0]->description); ?></td>
+                                    <td><?= $ad->town->town_name?></td>-->
 
                                     <td class="actions">
                                         <?= $this->Html->link(__('voir offre'), ['action' => 'view', $ad->id]) ?>
                                     </td>
                                 </tr>
-                            <?php endforeach; ?>
+
                             <div class="info">
                                 <header>
-                                    <a href="property-detail.html"><h3><?= $this->Html->link('Type de bien / Ville / Code Postal / Departement','/offres/detail')?></h3></a>
-                                    <figure>N° de l'offre</figure>
+                                    <h3> <?= $this->Html->link(__($ad->type_ad->type_name), ['action' => 'view', $ad->id]) ?>
+                                                <?= $this->Html->link(__( $ad->town->town_name), ['action' => 'view', $ad->id]) ?>
+                                                <?= $this->Html->link(__(  $ad->town->town_zip_code), ['action' => 'view', $ad->id]) ?>
+                                    </h3>
+                                    <figure>Offre N° <?=$ad->id?></figure>
                                 </header>
-                                <div class="tag price">Prix €, Prix info</div>
+                                <div class="tag price"><?= $this->Number->format($ad->price) ?> € <?= ($ad->price_info) ?></div>
                                 <aside>
-                                    <p>Description ... Description ... Description ... Description ...
-                                        Description ... Description ... Description ...
+                                    <p><?=$ad->description?>
                                     </p>
                                     <dl>
                                         <dt>Surface:</dt>
-                                        <dd>860 m<sup>2</sup></dd>
+                                        <dd><?= $this->Number->format($ad->surface) ?><sup>m2</sup></dd>
                                         <dt>Divisible:</dt>
-                                        <dd>Oui</dd>
+                                        <dd><?= $this->BooleenTranslate->makeEdit($ad->is_divisible) ?></dd>
                                     </dl>
                                 </aside>
                                 <a href="property-detail.html" class="link-arrow"><?= $this->Html->link('Lire plus','/offres/detail')?></a>
                             </div>
                         </div><!-- /.property -->
-                        <section id="properties" class="display-lines">
-                            <div class="property">
 
-                                <div class="property-image">
-                                    <figure class="ribbon">Transaction</figure>
-                                    <a href="property-detail.html">
-
-                                        <img alt="" src="assets/img/properties/property-01.jpg">
-
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <header>
-                                        <a href="property-detail.html"><h3><?= $this->Html->link('Type de bien / Ville / Code Postal / Departement','/offres/detail')?></h3></a>
-                                        <figure>N° de l'offre</figure>
-                                    </header>
-                                    <div class="tag price">Prix €, Prix info</div>
-                                    <aside>
-                                        <p>Description ... Description ... Description ... Description ...
-                                            Description ... Description ... Description ...
-                                        </p>
-                                        <dl>
-                                            <dt>Surface:</dt>
-                                            <dd>860 m<sup>2</sup></dd>
-                                            <dt>Divisible:</dt>
-                                            <dd>Oui</dd>
-                                        </dl>
-                                    </aside>
-                                    <a href="property-detail.html" class="link-arrow"><?= $this->Html->link('Lire plus','/offres/detail')?></a>
-                                </div>
-                            </div><!-- /.property -->
-                            <section id="properties" class="display-lines">
-                                <div class="property">
-
-                                    <div class="property-image">
-                                        <figure class="ribbon">Transaction</figure>
-                                        <a href="property-detail.html">
-                                            <img alt="" src="assets/img/properties/property-01.jpg">
-                                        </a>
-                                    </div>
-                                    <div class="info">
-                                        <header>
-                                            <a href="property-detail.html"><h3><?= $this->Html->link('Type de bien / Ville / Code Postal / Departement','/offres/detail')?> </h3></a>
-                                            <figure>N° de l'offre</figure>
-                                        </header>
-                                        <div class="tag price">Prix €, Prix info</div>
-                                        <aside>
-                                            <p>Description ... Description ... Description ... Description ...
-                                                Description ... Description ... Description ...
-                                            </p>
-                                            <dl>
-                                                <dt>Surface:</dt>
-                                                <dd>860 m<sup>2</sup></dd>
-                                                <dt>Divisible:</dt>
-                                                <dd>Oui</dd>
-                                            </dl>
-                                        </aside>
-                                        <a href="property-detail.html" class="link-arrow"><?= $this->Html->link('Lire plus','/offres/detail')?></a>
-                                    </div>
-                                </div><!-- /.property -->
+                                <?php endforeach; ?>
 
 
 
@@ -189,11 +95,9 @@ TEMPLATE
                                 <!-- Pagination -->
                                 <div class="center">
                                     <ul class="pagination">
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
+                                        <?= $this->Paginator->prev('< ' . __('previous')) ?>
+                                        <?= $this->Paginator->numbers() ?>
+                                        <?= $this->Paginator->next(__('next') . ' >') ?>
                                     </ul><!-- /.pagination-->
                                 </div><!-- /.center-->
                             </section><!-- /#properties-->
@@ -231,14 +135,7 @@ TEMPLATE
                                 </select>
                             </div><!-- /.form-group -->
                             <div class="form-group">
-                                <select name="city">
-                                    <option value="">Type de bien</option>
-                                    <option value="1">Bureau</option>
-                                    <option value="2">Commerce</option>
-                                    <option value="3">Entrepôt</option>
-                                    <option value="4">Industrie</option>
-                                    <option value="5">Terrain</option>
-                                </select>
+                                <?= $this->Form->input('type_ad_id', ['options' => $typeAds,'label' => 'Type de bien']);?>
                             </div><!-- /.form-group -->
                             <div class="form-group">
                                 <select name="district">
@@ -250,13 +147,13 @@ TEMPLATE
                             <div class="form-group">
                                 Prix:
                                 <div class="price-range">
-                                    <input id="price-input" type="text" name="price" value="1000;299000">
+                                    <input id="price-input" type="text" name="price" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 Surface:
                                 <div class="price-range">
-                                    <input id="surface-input" type="text" name="price" value="1000;299000">
+                                    <input id="surface-input" type="text" name="price" value="">
                                 </div>
                             </div>
                             <div class="form-group">

@@ -13,6 +13,7 @@ use Cake\Event\Event;
  * @property \App\Model\Table\AdsTable $Ads
  * @property \App\Model\Table\ImagesTable $Images
  * @property \App\Model\Table\TownsTable $Towns
+ *  @property \App\Model\Table\AreasTable $Areas
  *
  */
 class AdsController extends AppController
@@ -31,7 +32,8 @@ class AdsController extends AppController
         ];
         $ads = $this->paginate($this->Ads);
 
-
+        $typeAds = $this->Ads->TypeAds->find('list',['keyField'=>'id','valueField'=>'type_name']);
+        $this->set(compact('ad', 'users', 'typeAds','towns'));
         $this->set(compact('ads'));
         $this->set('_serialize', ['ads']);
     }
@@ -46,10 +48,14 @@ class AdsController extends AppController
     public function view($id = null)
     {
         $ad = $this->Ads->get($id, [
-            'contain' => ['Users', 'TypeAds', 'Towns', 'Images', 'Messages']
+            'contain' => ['Users', 'TypeAds','Towns','Images']
         ]);
-
+       // $area_id = $ad->towns->area_id;
+      //  $area = $this->Ads->get($area_id,[
+        //'contain' => ['Towns']
+      //  ]);
         $this->set('ad', $ad);
+      //  $this->set('area', $area);
         $this->set('_serialize', ['ad']);
     }
 
@@ -81,7 +87,7 @@ class AdsController extends AppController
         }
         $towns = $this->Ads->Towns->find('list',['keyField'=>'id','valueField'=>'town_name']);
         $users = $this->Ads->Users->find('list');
-        $typeAds = $this->Ads->TypeAds->find('list');
+        $typeAds = $this->Ads->TypeAds->find('list',['keyField'=>'id','valueField'=>'type_name']);
         $this->set(compact('ad', 'users', 'typeAds','towns'));
         $this->set('_serialize', ['ad']);
     }
