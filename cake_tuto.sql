@@ -5407,7 +5407,8 @@ CREATE TABLE `users` (
   `facebook_link` varchar(150) COLLATE utf16_unicode_ci,
   `twitter_link` varchar(150) COLLATE utf16_unicode_ci,
   `linkedin_link` varchar(150) COLLATE utf16_unicode_ci,
-  `email_is_hidden` tinyint(1) NOT NULL DEFAULT 0,
+  `email_is_hidden` tinyint(1) DEFAULT 0,
+  `description` varchar(255) COLLATE utf16_unicode_ci DEFAULT 'Aucune description',
   `created` datetime,
   `modified` datetime
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;

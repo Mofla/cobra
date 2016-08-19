@@ -36,7 +36,8 @@ class UsersFixture extends TestFixture
         'facebook_link' => ['type' => 'string', 'length' => 150, 'null' => true, 'default' => null, 'collate' => 'utf16_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'twitter_link' => ['type' => 'string', 'length' => 150, 'null' => true, 'default' => null, 'collate' => 'utf16_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'linkedin_link' => ['type' => 'string', 'length' => 150, 'null' => true, 'default' => null, 'collate' => 'utf16_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'email_is_hidden' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
+        'email_is_hidden' => ['type' => 'boolean', 'length' => null, 'null' => true, 'default' => '0', 'comment' => '', 'precision' => null],
+        'description' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => 'Aucune description', 'collate' => 'utf16_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         '_indexes' => [
@@ -81,8 +82,9 @@ class UsersFixture extends TestFixture
             'twitter_link' => 'Lorem ipsum dolor sit amet',
             'linkedin_link' => 'Lorem ipsum dolor sit amet',
             'email_is_hidden' => 1,
-            'created' => '2016-08-18 13:34:43',
-            'modified' => '2016-08-18 13:34:43'
+            'description' => 'Lorem ipsum dolor sit amet',
+            'created' => '2016-08-19 12:10:00',
+            'modified' => '2016-08-19 12:10:00'
         ],
     ];
 }

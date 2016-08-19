@@ -5,6 +5,9 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="ThemeStarz">
+<title>
+    <?= $titre ?>
+</title>
 
 <?= $this->Html->css("http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css") ?>
 <?= $this->Html->css('assets/fonts/font-awesome.css rel="stylesheet" type="text/css"') ?>
@@ -39,6 +42,7 @@
 <?= $this->Html->script('markerclusterer_packed.js') ?>
 <?= $this->Html->script('custom-map.js') ?>
 <?= $this->Html->script('custom.js') ?>
+<?= $this->Html->script('icheck.min.js') ?>
 <!--[if gt IE 8]-->
 <?= $this->Html->script('ie') ?>
 
@@ -52,8 +56,23 @@
             <div class="container">
                 <div class="user-area">
                     <div class="actions">
-                        <?= $this->Html->link('S‘inscrire','/inscription/') ?>
-                        <?= $this->Html->link('Connexion','/connexion/') ?>
+                        <?php
+                            if(null !== $this->request->session()->read('Auth.User.id'))
+                            {
+                                echo $this->Html->link(__('Profil'),['controller' => 'Users', 'action' => 'view',$this->request->session()->read('Auth.User.id')]);
+                                if($this->request->session()->read('Auth.User.is_admin'))
+                                {
+                                    echo $this->Html->link(__('Gestion des partenaires'),['controller' => 'Users', 'action' => 'index']);
+                                }
+                                echo $this->Html->link(__('Déconnexion'),['controller' => 'Users', 'action' => 'logout']);
+                            }
+                            else
+                            {
+                                echo $this->Html->link(__('S\'inscrire'),['controller' => 'Users', 'action' => 'add']);
+                                echo $this->Html->link(__('Connexion'),['controller' => 'Users', 'action' => 'login']);
+                            }
+                        ?>
+                        <?= $this->Html->link(__('Nous contacter'),['controller' => 'Infos', 'action' => 'contact']); ?>
                     </div>
                 </div>
             </div>
@@ -70,15 +89,16 @@
                     <div class="navbar-brand nav" id="brand">
                         <a href="index-google-map-fullscreen.html"></a>
                     </div>
-                    <img src="logo.png" height="100px" width="300px">
+                    <?= $this->Html->image('logo.png',['height' => 100, 'width' => 300]) ?>
 
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
 
                     <ul class="nav navbar-nav">
-                        <li class="active has-child"><?= $this->Html->link('Accueil','/index')?></li>
-                        <li class="active has-child"><?= $this->Html->link('Nos Offres','/offres/liste')?></li>
-                        <li class="active has-child"><?= $this->Html->link('Deposer une offre','/offres/ajouter')?></li>
+                        <li class="active "><?= $this->Html->link(__('Accueil'),['controller' => 'Ads', 'action' => 'index']) ?></li>
+                        <li class="active "><?= $this->Html->link(__('Nos Offres'),['controller' => 'Ads', 'action' => 'liste'])?></li>
+                        <li class="active"><?= $this->Html->link(__('Nos Partenaires'),['controller' => 'Users', 'action' => 'agents'])?></li>
+                        <li class="active"><?= $this->Html->link(__('Deposer une offre'),['controller' => 'Ads', 'action' => 'add'])?></li>
                         <li></li>
                     </ul>
                 </nav><!-- /.navbar collapse-->
@@ -115,7 +135,7 @@
                                 <div class="property small">
                                     <a href="property-detail.html">
                                         <div class="">
-                                            <img src="logofooter.png" width="200px" height="100px">
+                                            <?= $this->Html->image('logofooter.png',['width' => 200, 'height' => 100]) ?>
                                         </div>
                                     </a>
                                     <div class="info">
@@ -142,23 +162,24 @@
                             <article>
                                 <h3>Contact</h3>
                                 <address>
-                                    <strong>Your Company</strong><br>
-                                    4877 Spruce Drive<br>
-                                    West Newton, PA 15089
+                                    <strong>CCI Lorraine</strong><br>
+                                    51 Rue Stanislas<br>
+                                    54000 Nancy
                                 </address>
-                                +1 (734) 123-4567<br>
-                                <a href="#">hello@example.com</a>
+                                03 83 90 13 13<br>
+                                <!-- <a href="#">hello@example.com</a> -->
                             </article>
                         </div><!-- /.col-sm-3 -->
                         <div class="col-md-3 col-sm-3">
                             <article>
                                 <h3>Menu</h3>
                                 <ul class="list-unstyled list-links">
-                                    <li><?= $this->Html->link('Accueil','/index')?></li>
-                                    <li><?= $this->Html->link('Nos Offres','/offres/liste')?></li>
-                                    <li><?= $this->Html->link('Deposer une offre','/offres/ajouter')?></li>
-                                    <li><a href="9contact.html">Contacts</a></li>
-                                    <li><a href="11terms-conditions.html">Terms and Conditions</a></li>
+                                    <li><?= $this->Html->link(__('Accueil'),['controller' => 'Ads', 'action' => 'index']) ?></li>
+                                    <li><?= $this->Html->link(__('Nos Offres'),['controller' => 'Ads', 'action' => 'liste'])?></li>
+                                    <li><?= $this->Html->link(__('Nos Partenaires'),['controller' => 'Users', 'action' => 'agents'])?></li>
+                                    <li><?= $this->Html->link(__('Deposer une offre'),['controller' => 'Ads', 'action' => 'add'])?></li>
+                                    <li><?= $this->Html->link(__('Mentions légales'),['controller' => 'Infos', 'action' => 'mentions'])?></li>
+
                                 </ul>
                             </article>
                         </div><!-- /.col-sm-3 -->

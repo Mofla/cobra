@@ -49,7 +49,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    //$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    $routes->connect('/', ['controller' => 'Ads', 'action' => 'index', 'home']);
     /**
      * Routage des offres
      */
@@ -66,6 +67,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     //$routes->connect('/details/*', ['controller' => 'Users', 'action' => 'view']);
     $routes->connect('/profil/*', ['controller' => 'Users', 'action' => 'view']);
     $routes->connect('/valider/*', ['controller' => 'Users', 'action' => 'validate']);
+    $routes->connect('/partenaires/liste/', ['controller' => 'Users', 'action' => 'agents']);
+    $routes->connect('/partenaires/gestion/', ['controller' => 'Users', 'action' => 'index']);
     /**
      * Routage infos
      */

@@ -1,143 +1,390 @@
-<div class="container">
-    <header><h1>Inscription</h1></header>
-    <div class="row">
-        <div class="col-md-8 col-sm-12 col-md-offset-3">
-            <h3>Type de vendeur</h3>
-            <?= $this->Form->create('formulaire',['class' => 'formulaire']) ?>
-            <?= $this->Form->hidden('id', ['value' => '']) ?>
-            <?= $this->Form->hidden('is_admin', ['value' => '0']) ?>
-            <?= $this->Form->hidden('is_active', ['value' => '0']) ?>
-            <?= $this->Form->hidden('is_member', ['value' => '1']) ?>
-
-                <div class="radio" id="create-account-user">
-                    <label>
-                        <input type="radio" id="account-type-user" name="account-type" required>Particulier
-                    </label>
+<div class="wrapper">
+    <!-- Navigation -->
+    <div class="navigation">
+        <div class="secondary-navigation">
+            <div class="container">
+                <div class="contact">
+                    <figure><strong>Téléphone:</strong>03 29 88 88 88</figure>
+                    <figure><strong>Email:</strong>nlauperrin@cci.fr</figure>
                 </div>
-                <div class="radio" id="agent-switch" data-agent-state="">
-                    <label>
-                        <input type="radio" id="account-type-agent" name="account-type" required>professionnelle
-                    </label>
-                </div>
-
-                <div id="agency" class="disabled">
-                    <div class="col-md-4 col-sm-4 col-md-offset-1">
-                        <div class="form-group">
-                            <label for="account-agency">Sélectionner votre categorie:</label>
-                            <?= $this->Form->select('type_user_id',$list,['id' => 'account-agency') ?>
-                        </div>
+                <div class="user-area">
+                    <div class="actions">
+                        <a href="create-agency.html" class="promoted">Je suis une Agence</a>
+                        <a href="create-agency.html" class="promoted">Je suis un Particulier</a>
+                        <a href="create-account.html" class="promoted"><strong>Créer un compte</strong></a>
+                        <a href="sign-in.html">Se Connecter</a>
                     </div>
-
-                    <div class="form-group col-md-4 col-sm-4">
-
-                        <label for="form-create-account-full-name">Nom d'agence:</label>
-                        <?= $this->Form->input('company_name',['class' => 'form-control']) ?>
-                    </div>
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
                 </div>
-
-                <hr>
-
-                <div class="form-group col-md-5 col-sm-12 ">
-
-                    <!--  <div id="agency" class="disabled"> -->
-                    <label for="form-create-account-full-name">Nom:</label>
-                    <?= $this->Form->input('last_name',['class' => 'form-control']) ?>
-                    <!-- </div> --><!-- /.form-group -->
-                </div>
-
-                <div class="form-group col-md-5 col-sm-12">
-                    <!--  <div id="agency" class="disabled"> -->
-                    <label for="form-create-account-full-name">Prénom:</label>
-                    <?= $this->Form->input('first_name',['class' => 'form-control']) ?>
-                    <!-- </div> --><!-- /.form-group -->
-                </div>
-
-
-                <div class="form-group col-md-5 col-sm-12">
-                    <!--  <div id="agency" class="disabled"> -->
-                    <label for="form-create-account-full-name">Identifiant:</label>
-                    <?= $this->Form->input('username',['class' => 'form-control']) ?>
-                    <!-- </div> --><!-- /.form-group -->
-                </div>
-
-
-                <div class="form-group col-md-5 col-sm-12">
-                    <!--  <div id="agency" class="disabled"> -->
-                    <label for="form-create-account-full-name">adresse:</label>
-                    <?= $this->Form->input('address',['class' => 'form-control']) ?>
-                    <!-- </div> --><!-- /.form-group -->
-                </div>
-
-
-                <div class="form-group col-md-3 col-sm-12">
-                    <!--  <div id="agency" class="disabled"> -->
-                    <label for="form-create-account-full-name">Ville:</label>
-                    <?= $this->Form->input('city',['class' => 'form-control']) ?>
-
-                    <!-- </div> --><!-- /.form-group -->
-                </div>
-
-
-
-                <div class="form-group col-md-2 col-sm-12">
-
-                    <label for="form-create-account-full-name">
-                        Code postal:</label>
-                    <?= $this->Form->input('zipcode',['class' => 'form-control']) ?>
-                    <!-- </div> --><!-- /.form-group -->
-                </div>
-
-
-                <div class="form-group col-md-5 col-sm-12 ">
-                    <label for="form-create-account-email">Email:</label>
-                    <?= $this->Form->input('email',['class' => 'form-control']) ?>
-
-                </div><!-- /.form-group -->
-
-
-                <div class="form-group col-md-5 col-sm-12 ">
-                    <label for="form-create-account-password">Mot de passe:</label>
-                    <?= $this->Form->input('password',['class' => 'form-control', 'name' => 'password']) ?>
-                </div><!-- /.form-group -->
-
-
-                <div class="form-group col-md-5 col-sm-12">
-                    <label for="form-create-account-confirm-password">Confirmer le mot de passe:</label>
-                    <?= $this->Form->input('password',['class' => 'form-control']) ?>
-                </div><!-- /.form-group -->
-
-
-                <div class=" clearfix col-md-offset-4">
-                    <?= $this->Form->submit('Inscription',['id' => 'account-submit', 'class' => 'btn btn-default']) ?>
-                </div>
-            </form>
-            <hr>
-
-            <div class="center">
-                <figure class="note">En cliquant sur le bouton “Valider l'inscription” vous serez d'accord avec nos termes et nos conditions<a href="terms-conditions.html">Termes et conditions</a></figure>
             </div>
         </div>
+        <div class="container">
+            <header class="navbar" id="top" role="banner">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand nav" id="brand">
+                        <a href="index-google-map-fullscreen.html"><img src="assets/img/cci_lor.png" alt="brand"></a>
+                    </div>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="active has-child"><a href="index.html">Accueil</a>
+                            <ul class="child-navigation">
+                            </ul>
+                        </li>
+                        <li class="has-child"><a href="#">Nos Offres</a>
+                            <ul class="child-navigation">
+                            </ul>
+                        </li>
+                        <li class="has-child"><a href="#">Déposer une Offre</a>
+                            <ul class="child-navigation">
+
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html">Contactez-Nous</a></li>
+                    </ul>
+                </nav><!-- /.navbar collapse-->
+                <div class="add-your-property">
+                    <a href="submit.html" class="btn btn-default"><i class="fa fa-plus"></i><span class="text">Vendez votre Bien !</span></a>
+                </div>
+            </header><!-- /.navbar -->
+        </div><!-- /.container -->
+    </div><!-- /.navigation -->
+    <!-- end Navigation -->
+    <!-- Page Content -->
+    <div id="page-content">
+        <!-- Breadcrumb -->
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="agents-listing.html">Agents</a></li>
+                <li class="active">Détails Agents</li>
+            </ol>
+        </div>
+        <!-- end Breadcrumb -->
+
+        <div class="container">
+            <div class="row">
+                <!-- Agent Detail -->
+                <div class="col-md-9 col-sm-9">
+                    <section id="agent-detail">
+                        <header><h1>Chambre des Commerces & de l'Industrie</h1></header>
+                        <section id="agent-info">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3">
+                                    <figure class="agent-image"><img alt="" src="assets/img/cci.jpg"></figure>
+                                </div><!-- /.col-md-3 -->
+                                <div class="col-md-5 col-sm-5">
+                                    <h3>Informations Contact</h3>
+                                    <dl>
+                                        <dt>Téléphone:</dt>
+                                        <dd>03 29 33 88 88</dd>
+                                        <dt>Mobile:</dt>
+                                        <dd>06 88 88 88 88</dd>
+                                        <dt>Email:</dt>
+                                        <dd><a href="mailto:#">nlauperrin@vosges.cci.fr</a></dd>
+                                    </dl>
+                                </div><!-- /.col-md-5 -->
+                                <div class="col-md-4 col-sm-4">
+                                    <h3>A propos de nous</h3>
+                                    <p>La CCI des Vosges propose des offres immobilières.
+                                    </p>
+                                </div><!-- /.col-md-4 -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-5 col-sm-offset-3 col-sm-5">
+                                    <h3>Agence :</h3>
+                                    <a href="agency-detail.html" class="agency-logo"><img alt="" src="assets/img/immo.png"></a>                                </div><!-- /.col-md-5 -->
+                                <div class="col-md-4 col-sm-4">
+                                    <h3>Réseaux sociaux</h3>
+                                    <div class="agent-social">
+                                        <a href="#" class="fa fa-twitter btn btn-grey-dark"></a>
+                                        <a href="#" class="fa fa-facebook btn btn-grey-dark"></a>
+                                        <a href="#" class="fa fa-linkedin btn btn-grey-dark"></a>
+                                    </div>
+                                </div><!-- /.col-md-4 -->
+                            </div><!-- /.row -->
+                        </section><!-- /#agent-info -->
+                        <hr class="thick">
+                        <section id="agent-properties">
+                            <header><h3>Propriétés du(10)</h3></header>
+                            <div class="layout-expandable">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="property">
+                                            <a href="property-detail.html">
+                                                <div class="property-image">
+                                                    <img alt="" src="assets/img/commerce_epinal.jpg">
+                                                </div>
+                                                <div class="overlay">
+                                                    <div class="info">
+                                                        <div class="tag price">50 €/m²</div>
+                                                        <h3>88000 Epinal</h3>
+                                                        <figure>Commerce, Zone de la Voivre</figure>
+                                                    </div>
+                                                    <ul class="additional-info">
+                                                        <li>
+                                                            <header>Surface:</header>
+                                                            <figure>800m²<sup></sup></figure>
+                                                        </li>
+                                                        <li>
+                                                            <header>Divisible:</header>
+                                                            <figure>Oui<sup></sup></figure>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div><!-- /.property -->
+                                    </div><!-- /.col-md-4 -->
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="property">
+                                            <a href="property-detail.html">
+                                                <div class="property-image">
+                                                    <img alt="" src="assets/img/entrepot_marguerite.jpg">
+                                                </div>
+                                                <div class="overlay">
+                                                    <div class="info">
+                                                        <div class="tag price">2,50€/m²</div>
+                                                        <h3>88000 St Marguerite</h3>
+                                                        <figure>Entrepôt, ZA de Sainte Marguerite </figure>
+                                                    </div>
+                                                    <ul class="additional-info">
+                                                        <li>
+                                                            <header>Surface:</header>
+                                                            <figure>367m²<sup>2</sup></figure>
+                                                        </li>
+                                                        <li>
+                                                            <header>Divisible:</header>
+                                                            <figure>Oui<sup></sup></figure>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div><!-- /.property -->
+                                    </div><!-- /.col-md-4 -->
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="property">
+                                            <a href="property-detail.html">
+                                                <div class="property-image">
+                                                    <img alt="" src="assets/img/entrepot_marguerite.jpg">
+                                                </div>
+                                                <div class="overlay">
+                                                    <div class="info">
+                                                        <div class="tag price">40 000 € HT</div>
+                                                        <h3>88400 Gerardmer, Terrain</h3>
+                                                        <figure>Terrain, Zone UE de Gerardmer</figure>
+                                                    </div>
+                                                    <ul class="additional-info">
+                                                        <li>
+                                                            <header>Surface:</header>
+                                                            <figure>2200m²<sup>2</sup></figure>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div><!-- /.property -->
+                                    </div><!-- /.col-md-4 -->
+                                </div><!-- /.row-->
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="property">
+                                            <a href="property-detail.html">
+                                                <div class="property-image">
+                                                    <img alt="" src="assets/img/commerce1_epinal.jpg">
+                                                </div>
+                                                <div class="overlay">
+                                                    <div class="info">
+                                                        <div class="tag price">70 200 €</div>
+                                                        <h3>88000 Epinal</h3>
+                                                        <figure>Commerce, Non renseigné</figure>
+                                                    </div>
+                                                    <ul class="additional-info">
+                                                        <li>
+                                                            <header>Surface:</header>
+                                                            <figure>42m²<sup>2</sup></figure>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div><!-- /.property -->
+                                    </div><!-- /.col-md-4 -->
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="property">
+                                            <a href="property-detail.html">
+                                                <div class="property-image">
+                                                    <img alt="" src="assets/img/bureau_epinal.jpg">
+                                                </div>
+                                                <div class="overlay">
+                                                    <div class="info">
+                                                        <div class="tag price">13 200 € / an</div>
+                                                        <h3>88000 Epinal</h3>
+                                                        <figure>Bureau, Les Tuileries</figure>
+                                                    </div>
+                                                    <ul class="additional-info">
+                                                        <li>
+                                                            <header>Surface:</header>
+                                                            <figure>146m²<sup>2</sup></figure>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div><!-- /.property -->
+                                    </div><!-- /.col-md-4 -->
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="property">
+                                            <a href="property-detail.html">
+                                                <div class="property-image">
+                                                    <img alt="" src="assets/img/commerce2_epinal.jpg">
+                                                </div>
+                                                <div class="overlay">
+                                                    <div class="info">
+                                                        <div class="tag price">12 000 € / an</div>
+                                                        <h3>88000 Epinal</h3>
+                                                        <figure>Local Commercial, Non indiqué </figure>
+                                                    </div>
+                                                    <ul class="additional-info">
+                                                        <li>
+                                                            <header>Surface:</header>
+                                                            <figure>125m²<sup>2</sup></figure>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </div><!-- /.property -->
+                                    </div><!-- /.col-md-4 -->
+                                </div><!-- /.row-->
+                                <div class="center">
+                                    <span class="show-all">Voir + de propriétés</span>
+                                </div>
+                        </section><!-- /#agent-properties -->
+                        <hr class="thick">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h3><b>Contacter le vendeur :</b></h3>
+                            </div><!-- /.col-md-5 -->
+                            <div class="col-md-7">
+                                <h3>Envoyer un Message</h3>
+                                <div class="agent-form">
+                                    <form role="form" id="form-contact-agent" method="post"  class="clearfix">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form-contact-agent-name">Votre Nom<em>*</em></label>
+                                                    <input type="text" class="form-control" id="form-contact-agent-name" name="form-contact-agent-name" required>
+                                                </div><!-- /.form-group -->
+                                            </div><!-- /.col-md-6 -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form-contact-agent-email">Email<em>*</em></label>
+                                                    <input type="email" class="form-control" id="form-contact-agent-email" name="form-contact-agent-email" required>
+                                                </div><!-- /.form-group -->
+                                            </div><!-- /.col-md-6 -->
+                                        </div><!-- /.row -->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form-contact-agent-message">Votre Message<em>*</em></label>
+                                                    <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message" required></textarea>
+                                                </div><!-- /.form-group -->
+                                            </div><!-- /.col-md-12 -->
+                                        </div><!-- /.row -->
+                                        <div class="form-group clearfix">
+                                            <button type="submit" class="btn pull-right btn-default" id="form-contact-agent-submit">Soumettre</button>
+                                        </div><!-- /.form-group -->
+                                        <div id="form-rating-status"></div>
+                                    </form><!-- /#form-contact -->
+                                </div><!-- /.rating-form -->
+                            </div>
+                        </div><!-- /.row -->
+                    </section><!-- /#agent-detail -->
+                </div><!-- /.col-md-9 -->
+                <!-- end Agent Detail -->
+
+                <!-- sidebar -->
+                <div class="col-md-3 col-sm-3">
+                    <section id="sidebar">
+                        <aside id="edit-search">
+                            <header><h3>Recherche</h3></header>
+                            <form role="form" id="form-sidebar" class="form-search" action="properties-listing.html">
+                                <div class="form-group">
+                                    <select name="type">
+                                        <option value="">Type transaction</option>
+                                        <option value="1">Location</option>
+                                        <option value="2">Vente</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <select name="country">
+                                        <option value="">Pays</option>
+                                        <option value="1">France</option>
+                                        <option value="2">Great Britain</option>
+                                        <option value="3">Spain</option>
+                                        <option value="4">Russia</option>
+                                        <option value="5">United States</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <select name="city">
+                                        <option value="">Ville</option>
+                                        <option value="1">Nancy</option>
+                                        <option value="2">Epinal</option>
+                                        <option value="3">Lyon</option>
+                                        <option value="4">Paris</option>
+                                        <option value="5">Lille</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <select name="district">
+                                        <option value="0">Départements</option>
+                                        <option value="1">Vosges</option>
+                                        <option value="2">Moselle</option>
+                                        <option value="3">Meurthe & Moselle</option>
+                                        <option value="4"></option>
+                                        <option value="5"></option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <select name="property-type">
+                                        <option value="">Type de propriétés</option>
+                                        <option value="1">Bureau</option>
+                                        <option value="2">Commerce</option>
+                                        <option value="3">Industrie</option>
+                                        <option value="4">Terrain</option>
+                                        <option value="5">Entrepôt</option>
+                                    </select>
+                                </div><!-- /.form-group -->
+                                <div class="form-group">
+                                    <div class="price-range">
+                                        <input id="price-input" type="text" name="price" value="1000;299000">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default">Rechercher maintenant !</button>
+                                </div><!-- /.form-group -->
+                            </form><!-- /#form-map -->
+                        </aside><!-- /#edit-search -->
+
+                        <aside id="our-guides">
+                            <header></header>
+                            <a href="#" class="universal-button">
+                                <figure class="fa fa-home"></figure>
+                                <span class="arrow fa fa-angle-right"></span>
+                            </a><!-- /.universal-button -->
+                            <a href="#" class="universal-button">
+                                <figure class="fa fa-umbrella"></figure>
+                                <span class="arrow fa fa-angle-right"></span>
+                            </a><!-- /.universal-button -->
+                        </aside><!-- /#our-guide -->
+                    </section><!-- /#sidebar -->
+                </div><!-- /.col-md-3 -->
+                <!-- end Sidebar -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
     </div>
+    <!-- end Page Content -->
 </div>
-</div>
-
-</div>
-</div>
-
-<script type="text/javascript" src="webroot/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="webroot/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="webroot/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="webroot/js/smoothscroll.js"></script>
-<script type="text/javascript" src="webroot/js/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="webroot/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="webroot/js/icheck.min.js"></script>
-<script type="text/javascript" src="webroot/js/retina-1.1.0.min.js"></script>
-<script type="text/javascript" src="webroot/js/custom.js"></script>
-<!--[if gt IE 8]>
-<script type="text/javascript" src="webroot/js/ie.js"></script>
-<![endif]-->

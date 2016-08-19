@@ -49,7 +49,7 @@
                 <div class="col-md-9 col-sm-9">
                     <section id="agent-detail">
                         <header><h1>Profil de <?= ucfirst($user['username']) ?></h1>
-                        <?= ($this->request->session()->read('Auth.User.username') == $user['username']) ? $this->Html->link(__('Editer mon profil'),['controller' => 'Users', 'action' => 'edit', $this->request->session()->read('Auth.User.id')]) : '' ?>
+                        <?= ($this->request->session()->read('Auth.User.username') == $user['username'] || $this->request->session()->read('Auth.User.is_admin')) ? $this->Html->link(__('Editer le profil'),['controller' => 'Users', 'action' => 'edit', $user['id']]) : '' ?>
                         </header>
                         <section id="agent-info">
                             <div class="row">

@@ -135,4 +135,14 @@ class UsersControllerTest extends IntegrationTestCase
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
+
+    /**
+     * Test agents method
+     *
+     * @return void
+     */
+    public function testAgents()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 }

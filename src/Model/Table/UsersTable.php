@@ -132,8 +132,10 @@ class UsersTable extends Table
 
         $validator
             ->boolean('email_is_hidden')
-            ->requirePresence('email_is_hidden', 'create')
-            ->notEmpty('email_is_hidden');
+            ->allowEmpty('email_is_hidden');
+
+        $validator
+            ->allowEmpty('description');
 
         return $validator;
     }

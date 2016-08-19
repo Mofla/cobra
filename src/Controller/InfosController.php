@@ -24,6 +24,18 @@ class InfosController extends AppController
 
     public function cgv()
     {
-
+        $this->set('titre','Conditions générales de ventes');
     }
+
+    public function mentions()
+    {
+        $this->set('titre','Mentions légales');
+    }
+
+    public function contact()
+    {
+        $this->set('titre','Nous contacter');
+    }
+
+
 }

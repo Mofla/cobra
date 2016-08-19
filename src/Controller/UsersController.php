@@ -13,7 +13,7 @@ class UsersController extends AppController
 {
     public $paginate = [
         'fields' => ['Users.id', 'Users.username'],
-        'limit' => 10,
+        'limit' => 20,
         'order' => [
             'Users.id' => 'asc'
         ]
@@ -39,6 +39,7 @@ class UsersController extends AppController
 
     public function login()
     {
+        $this->set('titre','Connexion');
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -59,16 +60,20 @@ class UsersController extends AppController
     {
         $attributes = 'class="page-sub-page page-create-account page-account" id="page-top"';
         $this->set('attributes',$attributes);
-        $this->set('title','Création d\'un compte');
+        $this->set('titre','Création d\'un compte');
     }
 
     public function view($id=null)
     {
         $users = $this->loadModel('Users');
+        $this->loadModel('Ads');
+        $this->loadModel('Images');
         if($this->request->isGet())
         {
             $user = $this->Users->get($id);
+            $this->set('titre','Profil de '.$user->username);
             $this->set('user',$user);
+
         }
 
         $this->set('title','Informations');
@@ -78,6 +83,7 @@ class UsersController extends AppController
     {
         $this->loadModel('Users');
         $this->loadModel('TypeUsers');
+        $this->set('titre','Inscription');
         $this->set('list',$this->TypeUsers->find('list',[
             'keyField' => 'id',
             'valueField' => 'type_user_name']));
@@ -111,12 +117,13 @@ class UsersController extends AppController
                 'valueField' => 'type_user_name']));
             $users = $this->loadModel('Users');
             $user = $this->Users->get($id);
+            $this->set('titre','Editer le profil de '.$user->username);
             if ($this->request->is(['post', 'put'])) {
                 $this->Users->patchEntity($user, $this->request->data);
                 if ($this->Users->save($user)) {
                     $this->Flash->success(__('Votre profil a bien été édité.'));
                     $this->request->session()->delete('Flash');
-                    return $this->redirect(['controller' => 'Ads', 'action' => 'index']);
+                    return $this->redirect(['controller' => 'Users', 'action' => 'view',$user->id]);
                 }
                 $this->Flash->error(__('Impossible d\'éditer votre profil.'));
             }
@@ -130,6 +137,7 @@ class UsersController extends AppController
 
     public function validate($mail)
     {
+        $this->set('titre','Validation de votre compte');
         if($this->request->isGet())
         {
             $this->loadModel('Users');
@@ -145,11 +153,11 @@ class UsersController extends AppController
                     ->set(['is_active' => true])
                     ->where(['email' => $user->email])
                     ->execute();
-                return $this->Flash->success(__('Votre profil a bien été validé.'));
+                $this->set('texte','Votre compte est maintenant actif');
 
             }
             else {
-                return $this->Flash->success(__('Profil déjà validé.'));
+                $this->set('texte','Votre compte est déjà actif');
             }
         }
 
@@ -157,6 +165,11 @@ class UsersController extends AppController
 
     public function index()
     {
+        if(!$this->request->session()->read('Auth.User.is_admin'))
+        {
+            return $this->redirect(['action' => 'nope']);
+        }
+        $this->set('titre','Liste des partenaires');
         $this->loadModel('Users');
         $users = $this->paginate($this->Users);
         $this->set(compact('users',$users));
@@ -179,5 +192,21 @@ class UsersController extends AppController
             }
             return $this->redirect(['controller' => 'Users', 'action' => 'index']);
         }
+    }
+
+    public function agents()
+    {
+        $this->loadModel('Users');
+        $this->set('titre','Liste des partenaires');
+        $users = $this->paginate($this->Users->find()->select(['id','username','company_name']));
+        $this->set('titre','Liste des partenaires');
+        $this->set(compact('users',$users));
+        $this->set('_serialize', ['users']);
+    }
+
+    public function nope()
+    {
+        $this->set('titre','Nope, juste nope');
+        $this->set('texte','Vous n\'avez pas les droits adéquats !');
     }
 }
