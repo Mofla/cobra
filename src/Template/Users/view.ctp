@@ -81,9 +81,9 @@
                                 <div class="col-md-4 col-sm-4">
                                     <h3>Réseaux sociaux</h3>
                                     <div class="agent-social">
-                                        <?= $this->Html->link(__('Twitter'),['class' => 'fa fa-twitter btn btn-grey-dark', 'url' => $user['twitter_link']]) ?>
-                                        <?= $this->Html->link(__('Facebook'),['class' => 'fa fa-facebook btn btn-grey-dark', 'url' => $user['twitter_link']]) ?>
-                                        <?= $this->Html->link(__('Linkedin'),['class' => 'fa fa-linkedin btn btn-grey-dark', 'url' => $user['linkedin']]) ?>
+                                        <a href="<?= $user['twitter_link'] ?>" class="fa fa-twitter btn btn-grey-dark"></a>
+                                        <a href="<?= $user['facebook_link'] ?>" class="fa fa-facebook btn btn-grey-dark"></a>
+                                        <a href="<?= $user['linkedin_link'] ?>" class="fa fa-linkedin btn btn-grey-dark"></a>
                                     </div>
                                 </div><!-- /.col-md-4 -->
                             </div><!-- /.row -->

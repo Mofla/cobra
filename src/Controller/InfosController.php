@@ -19,7 +19,7 @@ class InfosController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->Auth->allow('cgv');
+        $this->Auth->allow(['cgv','mentions','contact']);
     }
 
     public function cgv()

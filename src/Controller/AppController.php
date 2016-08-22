@@ -116,4 +116,13 @@ class AppController extends Controller
         $this->Auth->allow(['display']);
     }
 
+    public function isAuthorized()
+    {
+        if(!is_null($this->Auth->user('id')) && $this->Auth->user('is_admin'))
+        {
+            return true;
+        }
+        return false;
+    }
+
 }

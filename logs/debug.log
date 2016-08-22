@@ -3829,3 +3829,517 @@ Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
 
 
 
+2016-08-19 14:12:07 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/users/agents
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-19 14:12:38 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/connexion
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-19 14:27:25 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/connexion
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-19 14:27:29 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /ads/add
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-19 14:42:19 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/connexion
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-19 14:42:59 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/connexion
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-19 14:45:09 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /ads/add
+Referer URL: http://localhost:8765/info/contact
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:08:41 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/connexion
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:08:56 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/users/nope
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:11:00 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:11:06 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:11:20 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/profil/22
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:11:32 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:11:38 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:11:44 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:12:23 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/profil/22
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:12:27 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:14:57 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:38:37 Notice: Notice (8): Undefined variable: link1 in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 76]
+Request URL: /connexion
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 76
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:38:37 Notice: Notice (8): Undefined variable: link2 in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 77]
+Request URL: /connexion
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 77
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:42:28 Notice: Notice (8): Undefined property: App\View\Cell\LogsCell::$Auth in [/var/www/html/Animaux/cobra/src/View/Cell/LogsCell.php, line 11]
+Request URL: /connexion
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+App\View\Cell\LogsCell::display() - APP/View/Cell/LogsCell.php, line 11
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\View\Cell::Cake\View\{closure}() - CORE/src/View/Cell.php, line 181
+Cake\View\Cell::render() - CORE/src/View/Cell.php, line 223
+Cake\View\Cell::__toString() - CORE/src/View/Cell.php, line 264
+include - APP/Template/Layout/default.ctp, line 58
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:43:23 Notice: Notice (8): Undefined property: App\View\Cell\LogsCell::$Auth in [/var/www/html/Animaux/cobra/src/View/Cell/LogsCell.php, line 13]
+Request URL: /connexion
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+App\View\Cell\LogsCell::display() - APP/View/Cell/LogsCell.php, line 13
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\View\Cell::Cake\View\{closure}() - CORE/src/View/Cell.php, line 181
+Cake\View\Cell::render() - CORE/src/View/Cell.php, line 223
+Cake\View\Cell::__toString() - CORE/src/View/Cell.php, line 264
+include - APP/Template/Layout/default.ctp, line 58
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:43:25 Notice: Notice (8): Undefined property: App\View\Cell\LogsCell::$Auth in [/var/www/html/Animaux/cobra/src/View/Cell/LogsCell.php, line 13]
+Request URL: /connexion
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+App\View\Cell\LogsCell::display() - APP/View/Cell/LogsCell.php, line 13
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\View\Cell::Cake\View\{closure}() - CORE/src/View/Cell.php, line 181
+Cake\View\Cell::render() - CORE/src/View/Cell.php, line 223
+Cake\View\Cell::__toString() - CORE/src/View/Cell.php, line 264
+include - APP/Template/Layout/default.ctp, line 58
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:43:57 Notice: Notice (8): Undefined property: App\View\Cell\LogsCell::$Html in [/var/www/html/Animaux/cobra/src/View/Cell/LogsCell.php, line 13]
+Request URL: /connexion
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+App\View\Cell\LogsCell::display() - APP/View/Cell/LogsCell.php, line 13
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\View\Cell::Cake\View\{closure}() - CORE/src/View/Cell.php, line 181
+Cake\View\Cell::render() - CORE/src/View/Cell.php, line 223
+Cake\View\Cell::__toString() - CORE/src/View/Cell.php, line 264
+include - APP/Template/Layout/default.ctp, line 58
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:45:02 Notice: Notice (8): Undefined property: App\View\Cell\LogsCell::$Html in [/var/www/html/Animaux/cobra/src/View/Cell/LogsCell.php, line 13]
+Request URL: /connexion
+Referer URL: http://localhost:8765/index
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+App\View\Cell\LogsCell::display() - APP/View/Cell/LogsCell.php, line 13
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\View\Cell::Cake\View\{closure}() - CORE/src/View/Cell.php, line 181
+Cake\View\Cell::render() - CORE/src/View/Cell.php, line 223
+Cake\View\Cell::__toString() - CORE/src/View/Cell.php, line 264
+include - APP/Template/Layout/default.ctp, line 58
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 09:45:05 Notice: Notice (8): Undefined property: App\View\Cell\LogsCell::$Html in [/var/www/html/Animaux/cobra/src/View/Cell/LogsCell.php, line 13]
+Request URL: /connexion
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+App\View\Cell\LogsCell::display() - APP/View/Cell/LogsCell.php, line 13
+ReflectionMethod::invokeArgs() - [internal], line ??
+Cake\View\Cell::Cake\View\{closure}() - CORE/src/View/Cell.php, line 181
+Cake\View\Cell::render() - CORE/src/View/Cell.php, line 223
+Cake\View\Cell::__toString() - CORE/src/View/Cell.php, line 264
+include - APP/Template/Layout/default.ctp, line 58
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-22 11:59:49 Notice: Notice (8): Undefined variable: titre in [/var/www/html/Animaux/cobra/src/Template/Layout/default.ctp, line 9]
+Request URL: /index
+Referer URL: http://localhost:8765/connexion
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Layout/default.ctp, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::renderLayout() - CORE/src/View/View.php, line 633
+Cake\View\View::render() - CORE/src/View/View.php, line 592
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
